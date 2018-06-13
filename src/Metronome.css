@@ -1,7 +1,13 @@
+body {
+  background-color: #1b3b42;
+  color: #f0e7c0;
+  font-size: 2em;
+}
+
 .metronome {
   text-align: center;
   max-width: 375px;
-  margin: 0 auto;
+  margin: 40% auto;
   padding: 30px;
 }
 
@@ -18,4 +24,5 @@
   width: 100px;
   color: #fff;
   font-size: 18px;
+  margin: 0.2em;
 }

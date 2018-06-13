@@ -88,8 +88,18 @@ class Metronome extends Component {
             value={bpm}
             onChange={this.handleBpmChange} />
         </div>
+        <button
+          onClick={this.handleBpmChange}
+          value={Math.floor(bpm * 0.95)}>
+          -5%
+        </button>
         <button onClick={this.startStop}>
           {playing ? 'Stop' : 'Start'}
+        </button>
+        <button
+          onClick={this.handleBpmChange}
+          value={Math.floor(bpm * 1.05)}>
+          +5%
         </button>
       </div>
     );
