@@ -13,9 +13,13 @@ class Metronome extends Component {
     };
   }
 
+  handleBpmChange = event => {
+    const bpm = event.target.value;
+    this.setState({ bpm });
+  }
+
   render() {
-    let bpm = 100;
-    let playing = false;
+    const { playing, bpm } = this.state;
 
     return (
       <div className="metronome">
@@ -25,7 +29,8 @@ class Metronome extends Component {
             type="range"
             min="60"
             max="240"
-            value={bpm} />
+            value={bpm}
+            onChange={this.handleBpmChange} />
         </div>
         <button>
           {playing ? 'Stop' : 'Start'}
